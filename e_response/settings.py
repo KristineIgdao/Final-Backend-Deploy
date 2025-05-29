@@ -148,3 +148,11 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 SITE_DOMAIN = "http://192.168.1.113:8000"  # or your domain name
 
+# ✅ Static files
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Development static folder
+]
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Where collectstatic will collect to
+
+
