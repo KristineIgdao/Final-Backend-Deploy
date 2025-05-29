@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: e-response-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn e_response.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: e_response.settings
+      - key: SECRET_KEY
+        value: django-insecure-lq#k$zb)uen@0pb8j%&m54-dr$cmx8s%x#w8y_=4xhiu+4os&t
+      - key: DEBUG
+        value: False
+  
